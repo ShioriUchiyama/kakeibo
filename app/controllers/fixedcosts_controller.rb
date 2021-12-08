@@ -1,4 +1,6 @@
 class FixedcostsController < ApplicationController
+	before_action :ensure_user, only: [:edit, :update, :destroy]
+
     def index
 		@fixedcosts = Fixedcost.order(created_at: :asc)
 	end

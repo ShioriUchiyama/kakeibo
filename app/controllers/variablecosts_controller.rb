@@ -1,4 +1,5 @@
 class VariablecostsController < ApplicationController
+    before_action :ensure_user, only: [:edit, :update, :destroy]
 
     def index
         @variablecosts = Variablecost.order(created_at: :asc)

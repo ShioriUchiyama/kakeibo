@@ -28,6 +28,7 @@ gem 'coffee-rails', '~> 4.2'
  
 gem 'chart-js-rails', '~> 0.1.4'
 gem 'gon', '~> 6.2.0'
+gem 'bcrypt',  '3.1.12'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

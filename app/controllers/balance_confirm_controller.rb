@@ -1,4 +1,6 @@
 class BalanceConfirmController < ApplicationController
+    before_action :ensure_user, only: [:edit, :update, :destroy]
+
     def top
     end
     def show

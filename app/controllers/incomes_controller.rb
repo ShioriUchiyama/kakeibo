@@ -1,4 +1,5 @@
 class IncomesController < ApplicationController
+	before_action :ensure_user, only: [:edit, :update, :destroy]
 
     def index
         @incomes = Income.order(created_at: :asc)

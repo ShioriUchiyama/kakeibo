@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'tasks/new'
+  get 'sessions/new'
+  get    'login',   to: 'sessions#new'
+  post   'login',   to: 'sessions#create'
+  delete 'logout',  to: 'sessions#destroy'
   root "top#index"
   post "income_values/new(/:name)" => "income_values#new"
   post "fixedcost_values/new(/:name)" => "fixedcost_values#new"
